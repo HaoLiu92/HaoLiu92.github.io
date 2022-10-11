@@ -27,7 +27,7 @@
     <main id="app">
         <aside>
             <p id="describe">
-                可以在这里简单介绍你自己
+                The Sciolist.
             </p>
         </aside>
         <p class="tip">现在总共 b 了 {{count}} 条</p>
@@ -51,10 +51,9 @@
         Query
     } = AV;
     AV.init({
-        appId: "aaa", //你的 leancloud 应用 id （设置-应用keys-AppID）
-        appKey: "aaa", //你的 leancloud 应用 AppKey （设置-应用keys-AppKey）
-        serverURLs: '国际版可删除该行，否则必须在后台绑定域名并填写在此'
-    });
+        appId: "U2Kud5ByJ2J7GAhSoy9DDS8u-MdYXbMMI", //你的 leancloud 应用 id （设置-应用keys-AppID）
+        appKey: "jmWIDmorCEiY6GQ9Vsi5qpfE", //你的 leancloud 应用 AppKey （设置-应用keys-AppKey）
+     });
 
     //设定存储数据的 className
     var query = new AV.Query('content');
