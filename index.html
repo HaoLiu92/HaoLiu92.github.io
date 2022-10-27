@@ -159,6 +159,7 @@
         <section class="item" v-for="item in contents" v-cloak>
             <p v-html='item.attributes.content'></p>
             <time v-bind:datetime="item.attributes.time">{{item.attributes.time}}</time>
+            <p v-html='item.attributes.role_type'></p>
         </section>
         <div class="load-ctn">
             <button class="load-btn" v-on:click="loadMore" v-if="contents" v-cloak>more</button>
@@ -216,6 +217,7 @@
                     let dateTmp = new Date(i.createdAt);
                     i.attributes.time = `${dateTmp.getFullYear()}-${(dateTmp.getMonth() + 1) < 10 ? ('0' + (dateTmp.getMonth()+1)) : dateTmp.getMonth()+1}-${(dateTmp.getDate() + 1) < 10 ? ('0' + dateTmp.getDate()) : dateTmp.getDate()} ${(dateTmp.getHours() + 1) <= 10 ? ('0' + dateTmp.getHours()) : dateTmp.getHours()}:${(dateTmp.getMinutes() + 1) <= 10 ? ('0' + dateTmp.getMinutes()) : dateTmp.getMinutes()}`;
                     i.attributes.content = "<pre>" + urlToLink(i.attributes.content) + "</pre>";
+                    i.attributes.role_type = "<pre>" + urlToLink(i.attributes.role_type) + "</pre>";
                     app.contents.push(i);
                 })
             }
